@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samsung Galaxy S26 | Galaxy AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <a href="#" class="nav-logo">SAMSUNG<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Especificaciones</a></li>
+      <li><a href="#">Cámara</a></li>
+      <li><a href="#">Galaxy AI</a></li>
+      <li><a href="#">Colores</a></li>
+      <li><a href="#">Modelos</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="hero-grid">
+
+      <!-- Texto -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">Galaxy Unpacked 2026</div>
+        <h1>
+          <span class="brand">Samsung</span><br>
+          <span class="model">Galaxy S26</span>
+        </h1>
+        <p class="hero-tagline">
+          La tercera generación del teléfono con IA de Samsung.<br>
+          Más intuitivo, más potente, más personal que nunca.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Galaxy AI</span>
+          <span class="badge">Snapdragon 8 Elite Gen 5</span>
+          <span class="badge">50 MP</span>
+          <span class="badge">IP68</span>
+          <span class="badge">5G</span>
+        </div>
+      </div>
+
+      <!-- Mockup teléfono -->
+      <div class="hero-visual">
+        <div class="phone-wrap">
+          <div class="phone-glow-ring"></div>
+          <div class="phone-frame">
+            <div class="phone-notch">
+              <div class="notch-cam"></div>
+            </div>
+            <div class="phone-screen">
+              <div class="screen-time" id="clock">--:--</div>
+              <div class="screen-date" id="dateDisplay">Cargando...</div>
+              <div class="screen-icons">
+                <div class="s-icon">📷</div>
+                <div class="s-icon">🌐</div>
+                <div class="s-icon">🎵</div>
+                <div class="s-icon">💬</div>
+                <div class="s-icon">📺</div>
+                <div class="s-icon">🗺️</div>
+                <div class="s-icon">📧</div>
+                <div class="s-icon">⚙️</div>
+              </div>
+            </div>
+            <div class="phone-side-btn"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ':' + m;
+      const days   = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+      const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+      document.getElementById('dateDisplay').textContent =
+        days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()];
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
